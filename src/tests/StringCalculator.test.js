@@ -25,3 +25,11 @@ test('returns sum of two numbers', () => {
 test('returns sum of two numbers', () => {
     expect(add("1\n2,3")).toBe(6);
   });
+
+// 5. Checking whether it work for different deliminator   
+
+  test('should work for different delimiters', () => {
+    expect(add("//;\n1;2")).toBe(3);
+  });  
+
+ 
