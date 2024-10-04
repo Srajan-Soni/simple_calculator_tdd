@@ -32,4 +32,9 @@ test('returns sum of two numbers', () => {
     expect(add("//;\n1;2")).toBe(3);
   });  
 
+ // 6. Checkng for negative values 
  
+test('throws an exception for negative numbers', () => {
+    expect(() => add("1,-2,3,-4")).toThrow("negative numbers not allowed: -2,-4");
+  });
+  
