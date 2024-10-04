@@ -1,10 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from 'react';
+import StringCalculator from './components/StringCalculator';
 
 function App() {
   return (
     <div className="App">
-      <h1>Simple cal</h1>
+      <h1>String Calculator</h1>
+      <StringCalculator />
     </div>
   );
 }

@@ -34,7 +34,14 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.5.0",
     "@testing-library/react": "^16.0.1"
-  }
+  },
+  "jest": {
+  "testMatch": [
+    "**/src/**/*.(test|spec).js"
+  ]
+}
+
 }

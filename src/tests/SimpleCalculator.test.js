@@ -28,9 +28,10 @@ test('returns sum of two numbers', () => {
 
 // 5. Checking whether it work for different deliminator   
 
-  test('should work for different delimiters', () => {
-    expect(add("//;\n1;2")).toBe(3);
-  });  
+test('supports different delimiters', () => {
+  expect(add("//;\n1;2")).toBe(3); // Custom delimiter ';'
+});
+
 
  // 6. Checkng for negative values 
  
