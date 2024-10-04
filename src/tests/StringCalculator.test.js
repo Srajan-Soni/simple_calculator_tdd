@@ -13,3 +13,9 @@ test('returns number when a single number is passed', () => {
     expect(add("1")).toBe(1);
   });
 
+// Checking for sum of two nums
+
+test('returns sum of two numbers', () => {
+    expect(add("1,2")).toBe(3);
+  });
+

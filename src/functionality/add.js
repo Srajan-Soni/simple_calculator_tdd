@@ -2,8 +2,11 @@
 export function add(numbers) {
     if (!numbers) return 0;
 
-    if(numbers.length>=1){
-        return parseInt(numbers)
-    }
+    
+    const nums = numbers.split(",").map(Number)
+    const sum = nums.reduce((acc,n)=> acc+n,0);
+    console.log(sum);
+    
+    return sum;
   }
   
