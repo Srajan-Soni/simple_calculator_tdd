@@ -1,4 +1,3 @@
-// src/functionality/add.js
 
 function escapeRegExp(string) {
     return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");

@@ -8,7 +8,6 @@ test('returns 0 for an empty string', () => {
 
 // 2. Checking number 
 
-
 test('returns number when a single number is passed', () => {
     expect(add("1")).toBe(1);
   });
