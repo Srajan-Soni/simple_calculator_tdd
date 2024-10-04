@@ -1,6 +1,5 @@
-import { render, fireEvent, screen } from '@testing-library/react';
+import { render, fireEvent, screen, waitFor } from '@testing-library/react';
 import StringCalculator from './StringCalculator';
-
 
 test('renders the input box and button', () => {
   render(<StringCalculator />);
@@ -10,13 +9,17 @@ test('renders the input box and button', () => {
   expect(buttonElement).toBeInTheDocument();
 });
 
-test('displays the result after clicking Calculate', () => {
+test('displays the result after clicking Calculate', async () => {
   render(<StringCalculator />);
   const inputElement = screen.getByPlaceholderText(/Enter numbers/);
   const buttonElement = screen.getByText(/Calculate/);
   
+  
   fireEvent.change(inputElement, { target: { value: '1,2' } });
+
   fireEvent.click(buttonElement);
 
-  expect(screen.getByText(/Result: 3/)).toBeInTheDocument();
+  await waitFor(() => {
+    expect(screen.getByText(/Result: 3/)).toBeInTheDocument();
+  });
 });
